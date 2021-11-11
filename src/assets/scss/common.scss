@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Greta Sans Condensed Bold", "Greta Sans Bold", Arial, sans-serif;
+}
+
+.container {
+	width: 1200px;
+	height: 100%;
+	margin: 0.5rem auto;
+}
+.row {
+	display: flex;
+	align-items: center;
+}
+.m {
+	margin: 0 0.5rem;
+}
