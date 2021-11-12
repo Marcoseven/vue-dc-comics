@@ -38,27 +38,23 @@
 @import "../assets/scss/common.scss";
 @import "../assets/scss/variables.scss";
 #SiteHeader {
-	height: 15vh;
-	//height: 100px;
+	height: auto;
+	margin-bottom: 0.5rem;
+
 	.row {
-		height: 100%;
 		justify-content: space-between;
 		align-items: center;
 		img:hover {
 			cursor: pointer;
 		}
 	}
+
 	.menu {
 		a {
 			margin: 0 0.5rem;
-			text-decoration: none;
+			padding: 2rem 0;
 			color: #333;
-			&.active {
-				background-color: $brand_color;
-			}
 			&:hover {
-				height: 100%;
-				padding: 2rem 0;
 				color: $brand_color;
 				border-bottom: 5px solid $brand_color;
 			}
