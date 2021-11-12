@@ -1,57 +1,85 @@
 <template>
 	<main id="SiteMain">
+		<!-- #jumbo -->
 		<div id="jumbo"></div>
-		<!-- .rowUp -->
-		<div class="rowUp row">
+		<!-- /#jumbo -->
+
+		<!-- #rowCards -->
+		<div id="rowCards">
 			<div class="container">
+				<div id="buttonSeries">
+					<span>
+						<h2>CURRENT SERIES</h2>
+					</span>
+				</div>
+
 				<div class="row">
 					<Product
 						v-for="card in cards"
 						:key="card.series"
 						:image="card.thumb"
-						:titolo="card.series"
-						:cardType="card.type"
+						:title="card.series"
 						class="col-2"
 					/>
 				</div>
+				<div class="col-12" id="buttonMore">
+					<button type="submit">LOAD MORE</button>
+				</div>
 			</div>
 		</div>
-		<!-- /.rowUp -->
+		<!-- /#rowCards -->
 
-		<!-- .rowCards -->
-		<div class="rowCards">
-			<div class="col-2">
-				<a href="#">
-					<img src="../assets/img/buy-comics-digital-comics.png" alt="" />
-					<h6>DIGITAL COMICS</h6>
-				</a>
-			</div>
-			<div class="col-2">
-				<a href="#">
-					<img src="../assets/img/buy-comics-merchandise.png" alt="" />
-					<h6>DC MERCHANDISE</h6>
-				</a>
-			</div>
-			<div class="col-2">
-				<a href="#">
-					<img src="../assets/img/buy-comics-subscriptions.png" alt="" />
-					<h6>SUBSCRIPTION</h6>
-				</a>
-			</div>
-			<div class="col-2">
-				<a href="#">
-					<img src="../assets/img/buy-comics-shop-locator.png" alt="" />
-					<h6>COMIC SHOP LOCATOR</h6>
-				</a>
-			</div>
-			<div class="col-2">
-				<a href="#">
-					<img src="../assets/img/buy-dc-power-visa.svg" alt="" />
-					<h6>DC POWER VISA</h6>
-				</a>
+		<!-- #rowIcons -->
+		<div id="rowIcons">
+			<div class="container row">
+				<div class="col-2">
+					<a href="#">
+						<img
+							src="../assets/img/buy-comics-digital-comics.png"
+							alt="immagine di un tablet con raffigurato il logo della Digital Comics"
+						/>
+						<h6>DIGITAL COMICS</h6>
+					</a>
+				</div>
+				<div class="col-2">
+					<a href="#">
+						<img
+							src="../assets/img/buy-comics-merchandise.png"
+							alt="immagine che raffigura una maglietta"
+						/>
+						<h6>DC MERCHANDISE</h6>
+					</a>
+				</div>
+				<div class="col-2">
+					<a href="#">
+						<img
+							src="../assets/img/buy-comics-subscriptions.png"
+							alt="immagine di due card"
+						/>
+						<h6>SUBSCRIPTION</h6>
+					</a>
+				</div>
+				<div class="col-2">
+					<a href="#">
+						<img
+							src="../assets/img/buy-comics-shop-locator.png"
+							alt="immagine che raffigura la localizzazione di un luogo"
+						/>
+						<h6>COMIC SHOP LOCATOR</h6>
+					</a>
+				</div>
+				<div class="col-2">
+					<a href="#">
+						<img
+							src="../assets/img/buy-dc-power-visa.svg"
+							alt="immagine che raffigura una card"
+						/>
+						<h6>DC POWER VISA</h6>
+					</a>
+				</div>
 			</div>
 		</div>
-		<!-- /.rowCards -->
+		<!-- /#rowIcons -->
 	</main>
 </template>
 
@@ -169,25 +197,49 @@ export default {
 		background-size: cover;
 	}
 
-	.rowUp {
+	/* #rowCards */
+	#rowCards {
 		height: auto;
-		align-items: center;
-		justify-content: start !important;
-		flex-wrap: wrap;
 		background-color: #000;
+		#buttonSeries h2 {
+			width: 20%;
+			padding: 0.5rem 1rem;
+			font-size: 20px;
+			background-color: $brand_color;
+			color: white;
+			text-align: center;
+			position: relative;
+			top: -15px;
+			left: 0;
+		}
 
 		.row {
 			flex-wrap: wrap;
 		}
-	}
-	.rowCards {
-		height: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		background-color: $brand_color;
 
-		.cards-2 {
+		#buttonMore {
+			text-align: center;
+
+			button {
+				padding: 0.5rem 3rem;
+				margin-bottom: 1rem;
+				color: #fff;
+				background-color: $brand_color;
+				border: none;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	/* /#rowCards */
+
+	/* #rowIcons */
+	#rowIcons {
+		height: auto;
+		background-color: $brand_color;
+		.container {
+			justify-content: space-between;
 			align-items: center;
 		}
 
@@ -198,7 +250,6 @@ export default {
 		a {
 			display: flex;
 			align-items: center;
-			text-decoration: none;
 			color: #fff;
 			img {
 				width: 30%;
@@ -209,5 +260,6 @@ export default {
 			}
 		}
 	}
+	/* /#rowIcons */
 }
 </style>
