@@ -1,8 +1,11 @@
 <template>
 	<div>
 		<div class="card">
-			<img :src="image" alt="" />
-			<h3>{{ titolo }}</h3>
+			<img
+				:src="image"
+				alt="dodici immagini di copertine della serie fumetti DC Comics"
+			/>
+			<h4>{{ title }}</h4>
 		</div>
 	</div>
 </template>
@@ -11,7 +14,7 @@
 export default {
 	props: {
 		image: String,
-		titolo: String,
+		title: String,
 	},
 };
 </script>
@@ -19,8 +22,11 @@ export default {
 <style lang="scss">
 .card {
 	color: #fff;
-	text-align: center;
-	h3 {
+	text-align: left;
+	&:hover {
+		cursor: pointer;
+	}
+	h4 {
 		padding: 0.5rem;
 	}
 }
