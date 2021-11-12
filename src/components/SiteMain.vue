@@ -1,9 +1,13 @@
 <template>
 	<main id="SiteMain">
 		<div class="container">
-			<div class="rowUp d-flex">
+			<!-- .rowUp -->
+			<div class="rowUp row">
 				<div id="here">--> Content goes here</div>
 			</div>
+			<!-- /.rowUp -->
+
+			<!-- .rowCards -->
 			<div class="rowCards">
 				<div class="col-2">
 					<a href="#">
@@ -36,6 +40,7 @@
 					</a>
 				</div>
 			</div>
+			<!-- /.rowCards -->
 		</div>
 	</main>
 </template>
@@ -47,17 +52,19 @@
 @import "../assets/scss/variables.scss";
 
 #SiteMain {
-	height: auto;
+	height: 50vh;
+	position: relative;
+	z-index: 10;
 	background-image: linear-gradient(
 		to bottom,
 		#000 0px,
-		#000 100px,
-		$brand_backgroundColor 100px,
-		$brand_backgroundColor 250px
+		#000 40%,
+		$brand_color 40%,
+		$brand_color 100%
 	);
 
 	.rowUp {
-		height: 100px;
+		height: 45%;
 		align-items: center;
 		justify-content: start !important;
 		#here {
@@ -65,10 +72,11 @@
 		}
 	}
 	.rowCards {
-		height: 150px;
+		height: 55%;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+
 		.cards-2 {
 			align-items: center;
 		}
@@ -83,11 +91,11 @@
 			text-decoration: none;
 			color: #fff;
 			img {
-				width: 50px;
+				width: 30%;
 			}
 			:nth-child(2) {
 				margin: 0 0.5rem;
-				font-size: 13px;
+				font-size: 15px;
 			}
 		}
 	}

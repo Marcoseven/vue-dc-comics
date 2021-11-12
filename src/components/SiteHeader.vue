@@ -1,27 +1,35 @@
 <template>
+	<!-- #SiteHeader -->
 	<header id="SiteHeader">
 		<div class="container">
-			<div class="row d-flex">
-				<div class="">
+			<!-- .row -->
+			<div class="row">
+				<div>
 					<img src="../assets/img/dc-logo.png" alt="immagine logo dc" />
 				</div>
-				<div class="">
+				<div>
+					<!-- .menu -->
 					<nav class="menu">
-						<a href="#">CHACTERS</a>
-						<a href="#">COMICS</a>
-						<a href="#">MOVIES</a>
-						<a href="#">TV</a>
-						<a href="#">GAMES</a>
-						<a href="#">COLLECTIBLES</a>
-						<a href="#">VIDEOS</a>
-						<a href="#">FANS</a>
-						<a href="#">NEWS</a>
-						<a href="#">SHOP</a>
+						<ul class="row">
+							<li><a href="#">CHACTERS</a></li>
+							<li><a href="#">COMICS</a></li>
+							<li><a href="#">MOVIES</a></li>
+							<li><a href="#">TV</a></li>
+							<li><a href="#">GAMES</a></li>
+							<li><a href="#">COLLECTIBLES</a></li>
+							<li><a href="#">VIDEOS</a></li>
+							<li><a href="#">FANS</a></li>
+							<li><a href="#">NEWS</a></li>
+							<li><a href="#">SHOP</a></li>
+						</ul>
 					</nav>
+					<!-- /.menu -->
 				</div>
 			</div>
+			<!-- /.row -->
 		</div>
 	</header>
+	<!-- /#SiteHeader -->
 </template>
 
 <script></script>
@@ -30,24 +38,29 @@
 @import "../assets/scss/common.scss";
 @import "../assets/scss/variables.scss";
 #SiteHeader {
-	background-color: #fff;
-	height: 100px;
+	height: 15vh;
+	//height: 100px;
 	.row {
+		height: 100%;
 		justify-content: space-between;
+		align-items: center;
+		img:hover {
+			cursor: pointer;
+		}
 	}
 	.menu {
 		a {
-			margin: 0 0.5rem; 
+			margin: 0 0.5rem;
 			text-decoration: none;
 			color: #333;
 			&.active {
-				background-color: $brand_backgroundColor;
+				background-color: $brand_color;
 			}
 			&:hover {
 				height: 100%;
 				padding: 2rem 0;
-				color: $brand_backgroundColor;
-				border-bottom: 5px solid $brand_backgroundColor;
+				color: $brand_color;
+				border-bottom: 5px solid $brand_color;
 			}
 		}
 	}
