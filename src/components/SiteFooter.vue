@@ -4,7 +4,7 @@
 		<div class="rowLinks">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 row">
+					<div id="footerLinks" class="col-6 row">
 						<div>
 							<div>
 								<h4>DC COMICS</h4>
@@ -44,7 +44,7 @@
 								</ul>
 							</div>
 						</div>
-						<div id="colDC">
+						<div id="linksDC">
 							<h4>DC</h4>
 							<ul>
 								<li>
@@ -103,8 +103,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-6" id="image">
-						<img src="../assets/img/dc-logo-bg.png" alt="" />
+					<div id="image" class="col-6">
+						<img
+							src="../assets/img/dc-logo-bg.png"
+							alt="immagine logo DC Comics"
+						/>
 					</div>
 				</div>
 			</div>
@@ -114,27 +117,42 @@
 		<!-- .rowSocial -->
 		<div class="rowSocial">
 			<div class="container">
-				<div class="row" id="rowPrimary">
+				<div id="rowPrimary" class="row">
 					<div class="col-6 row">
-						<button>SIGN-UP NOW!</button>
+						<button type="submit">SIGN-UP NOW!</button>
 					</div>
-					<div class="col-6 row">
+					<div id="social" class="col-6 row">
 						<h4>FOLLOW US</h4>
 						<div class="row">
 							<a href="#"
-								><img src="../assets/img/footer-facebook.png" alt=""/>
+								><img
+									src="../assets/img/footer-facebook.png"
+									alt="immagine del logo di Facebook"
+								/>
 							</a>
 							<a href="#">
-								<img src="../assets/img/footer-twitter.png" alt="" />
+								<img
+									src="../assets/img/footer-twitter.png"
+									alt="immagine del logo di twitter"
+								/>
 							</a>
 							<a href="#">
-								<img src="../assets/img/footer-youtube.png" alt="" />
+								<img
+									src="../assets/img/footer-youtube.png"
+									alt="immagine del logo di YouTube"
+								/>
 							</a>
 							<a href="#">
-								<img src="../assets/img/footer-pinterest.png" alt="" />
+								<img
+									src="../assets/img/footer-pinterest.png"
+									alt="immagine del logo di Pinterest"
+								/>
 							</a>
 							<a href="#">
-								<img src="../assets/img/footer-periscope.png" alt="" />
+								<img
+									src="../assets/img/footer-periscope.png"
+									alt="immagine del logo di Periscope"
+								/>
 							</a>
 						</div>
 					</div>
@@ -155,12 +173,14 @@
 	width: 100%;
 
 	.rowLinks {
-		justify-content: space-between;
 		background-image: url("../assets/img/footer-bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
+		#footerLinks {
+			margin: 0.5rem 0;
+		}
 
-		#colDC {
+		#linksDC {
 			margin: 0 2rem;
 		}
 
@@ -181,10 +201,10 @@
 		}
 
 		img {
-			width: 65%;
+			width: 70%;
 			position: relative;
 			bottom: 20%;
-			right: 0;
+			right: -30%;
 		}
 	}
 }
@@ -197,8 +217,11 @@
 		height: 100%;
 		justify-content: space-between;
 
-		a {
-			margin: 0 0.5rem;
+		#social {
+			justify-content: end;
+			a {
+				margin: 0 0.6rem;
+			}
 		}
 	}
 
