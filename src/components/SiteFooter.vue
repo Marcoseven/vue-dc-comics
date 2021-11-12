@@ -120,35 +120,23 @@
 					</div>
 					<div class="col-6 row">
 						<h4>FOLLOW US</h4>
-						<ul class="row">
-							<li>
-								<a href="#">
-									<span>
-										<i class="fab fa-facebook-f"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a href="#"
-									><span> <i class="fab fa-twitter"></i> </span
-								></a>
-							</li>
-							<li>
-								<a href="#"
-									><span> <i class="fab fa-youtube-square"></i> </span
-								></a>
-							</li>
-							<li>
-								<a href="#"
-									><span> <i class="fab fa-pinterest-p"></i> </span
-								></a>
-							</li>
-							<li>
-								<a href="#"
-									><span> <i class="fas fa-map-marker-alt"></i> </span
-								></a>
-							</li>
-						</ul>
+						<div class="row">
+							<a href="#"
+								><img src="../assets/img/footer-facebook.png" alt=""/>
+							</a>
+							<a href="#">
+								<img src="../assets/img/footer-twitter.png" alt="" />
+							</a>
+							<a href="#">
+								<img src="../assets/img/footer-youtube.png" alt="" />
+							</a>
+							<a href="#">
+								<img src="../assets/img/footer-pinterest.png" alt="" />
+							</a>
+							<a href="#">
+								<img src="../assets/img/footer-periscope.png" alt="" />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -208,6 +196,10 @@
 	#rowPrimary {
 		height: 100%;
 		justify-content: space-between;
+
+		a {
+			margin: 0 0.5rem;
+		}
 	}
 
 	button {
@@ -228,18 +220,6 @@
 	h4 {
 		color: $brand_color;
 		margin-right: 1rem;
-	}
-
-	span {
-		margin: 0 0.5rem;
-		border-radius: 50%;
-		padding: 0.7rem;
-		background-color: gray;
-	}
-
-	i {
-		font-size: 20px;
-		color: $footer_backgroundColor;
 	}
 }
 </style>
